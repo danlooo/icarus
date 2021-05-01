@@ -13,7 +13,7 @@ const HOST = '0.0.0.0';
 const data = {
     port: process.env.BACKEND_PORT,
     hostname: process.env.BACKEND_HOSTNAME,
-    api_entrypoint: "http://" + process.env.BACKEND_HOSTNAME + ":" + process.env.BACKEND_PORT + "/"
+    api_entrypoint: "//" + process.env.BACKEND_HOSTNAME + ":" + process.env.BACKEND_PORT + "/"
 }
 const fs = require('fs');
 const { hostname } = require("os");
