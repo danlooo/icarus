@@ -1,0 +1,12 @@
+version: "3"
+services:
+  frontend:
+    build: frontend
+    image: danlooo/icarus-frontend
+    ports:
+      - "80:80"
+  backend:
+    build: backend
+    image: danlooo/icarus-backend
+    ports:
+      - "8000:8000"
