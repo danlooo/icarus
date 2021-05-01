@@ -1,31 +1,48 @@
 <html>
+<header>
     <title>icarus</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
-<head>
-
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+</header>
 
 <body>
-    <script
-			  src="https://code.jquery.com/jquery-3.6.0.min.js"
-			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			  crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">icarus</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="https://github.com/danlooo/icarus">GitHub</a>
+                </nav>
+            </div>
+        </header>
 
-    <h1>icarus</h1>
-    <p>
-        Joined species distribution modelling for birders 
-    </p>
-    <input
-        id = "search",
-        type = "search",
-        placeholder="Foo sp."
-        onkeydown="updateSpecies(this)"
-    />
-    <br>
-    <div id = "name"></div>
-    <br>
-    <img id = "bg-image", src="Flying-Dove-Silhouette.svg"/>
+        <main role="main" class="inner cover align-self-baseline">
+            <h1 class="cover-heading">icarus</h1>
+            <p class="lead">
+                Joined species distribution modelling for birders
+            </p>
+
+            <div class="input-group">
+                <input id="search-text" , onkeydown="checkClick(this)" , type="text" class="form-control" placeholder="Search for a species name">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" , id="search-btn" , onclick="updateSpecies()" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+                </div>
+            </div>
+            <br>
+            <div id="name"></div>
+        </main>
+    </div>
+
+    <img id="bg-image" , src="Flying-Dove-Silhouette.svg" />
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
 </html>
