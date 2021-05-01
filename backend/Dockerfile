@@ -7,5 +7,5 @@ RUN apt-get update -qq && apt-get install -y \
 RUN R -e "install.packages('plumber')"
 
 COPY / ./
-EXPOSE 8000
+EXPOSE 80
 CMD Rscript main.R

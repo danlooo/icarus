@@ -1,8 +1,15 @@
+var data;
+fetch("data.json")
+    .then(response => response.json())
+    .then(x => data = x)
+    .then(x => $("#api-link").attr("href", data.api_entrypoint + "__docs__/"))
+
+
 function updateSpecies() {
     var name = $("#search-text").val();
 
     $.ajax({
-        url: "http://localhost:8000/species",
+        url: data.api_entrypoint + "species",
         data: {
             name: name
         },
@@ -16,9 +23,4 @@ function checkClick(ele) {
     if (event.key === "Enter") {
         updateSpecies()
     }
-}
-
-function click() {
-    console.log("clicked")
-    updateSpecies($("#search-text").val())
 }

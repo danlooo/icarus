@@ -9,7 +9,6 @@ library(plumber)
 
 #' @filter cors
 function(req, res) {
-  
   res$setHeader("Access-Control-Allow-Origin", "*")
   
   if (req$REQUEST_METHOD == "OPTIONS") {
@@ -23,7 +22,6 @@ function(req, res) {
   
 }
 
-
 #* Get species
 #*
 #* @param name the species name
@@ -31,11 +29,3 @@ function(req, res) {
 function(name){
   paste0(name, " sp.")
 }
-
-#* @get /species2
-function(name){
-  res$setHeader("foo", "bar")
-  
-  paste0(name, " sp.")
-}
-

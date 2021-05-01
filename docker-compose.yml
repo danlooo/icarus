@@ -5,8 +5,11 @@ services:
     image: danlooo/icarus-frontend
     ports:
       - "80:80"
+    environment:
+      - BACKEND_PORT=8000 
+      - BACKEND_HOSTNAME=localhost
   backend:
     build: backend
     image: danlooo/icarus-backend
     ports:
-      - "8000:8000"
+      - "8000:80"
